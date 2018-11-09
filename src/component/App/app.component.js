@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { data } from "../../config/data";
-import "./app.component.css";
+import "./app.component.scss";
 
 class AppComponent extends Component {
   render() {
