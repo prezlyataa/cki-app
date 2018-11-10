@@ -321,7 +321,7 @@ module.exports = {
             loaders: [
               require.resolve("style-loader"),
               require.resolve("css-loader"),
-              require.resolve("sass-loader")ß
+              require.resolve("sass-loader")
             ]
           },
           {
