@@ -1,15 +1,19 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { Layout } from "../layout";
 
-export class MainPage extends Component {
+class MainPage extends Component {
   render() {
-    const { data } = this.props;
     return (
       <div>
         <Layout>
-          <h3>Main page</h3>
+          <div className="container">
+            <h3>Main page</h3>
+          </div>
         </Layout>
       </div>
     );
   }
 }
+
+export default withRouter(props => <MainPage {...props} />);

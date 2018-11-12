@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import { MainPage } from "../components/main-page";
-import { EmployeesPage } from "../components/employees-page";
+import MainPage from "../components/main-page/main-page.component";
+import EmployeesPage from "../components/employees-page/employees-page.component";
 
 export class RouteSchema extends Component {
   render() {

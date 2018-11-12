@@ -1,29 +1,43 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import classnames from "classnames";
+import "./header.component.scss";
 
-export class Header extends Component {
+class Header extends Component {
   render() {
+    const { pathname } = this.props.location;
+    const activeEmployeesRoute = classnames({
+      "nav-item nav-link": true,
+      "active border-active": pathname === "/employees" ? "active" : ""
+    });
     return (
-      // <ul>
-      //   <li>
-      //     <Link to="employees">Employees page</Link>
-      //   </li>
-      //   <li>
-      //     <Link to="/">Main page</Link>
-      //   </li>
-      // </ul>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <Link to="/" class="nav-item nav-link">Main page</Link>
-            <Link to="employees" class="nav-item nav-link active">Employees page <span class="sr-only">(current)</span></Link>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container">
+          <Link to="/" className="navbar-brand" replace>
+            ЦКІ
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link to="employees" className={activeEmployeesRoute} replace>
+                Команда<span className="sr-only">(current)</span>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
     );
   }
 }
+
+export default withRouter(props => <Header {...props} />);

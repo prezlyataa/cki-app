@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import { AppComponent } from "./components/app";
 import "bootstrap/dist/css/bootstrap.min.css";
-import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "normalize.css";
 import "./index.scss";
