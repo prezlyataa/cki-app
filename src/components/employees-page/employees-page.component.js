@@ -19,7 +19,7 @@ class EmployeesPage extends Component {
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
                       <h4>{employee.name}</h4>
-                      <p>{employee.info}</p>
+                      <p className="employee__info">{employee.info}</p>
                     </div>
                   );
                 })}
@@ -34,7 +34,7 @@ class EmployeesPage extends Component {
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
                       <h4>{employee.name}</h4>
-                      <p>{employee.info}</p>
+                      <p className="employee__info">{employee.info}</p>
                     </div>
                   );
                 })}
@@ -49,7 +49,7 @@ class EmployeesPage extends Component {
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
                       <h4>{employee.name}</h4>
-                      <p>{employee.info}</p>
+                      <p className="employee__info">{employee.info}</p>
                     </div>
                   );
                 })}

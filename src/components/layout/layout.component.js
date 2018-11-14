@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Header  from "../header/header.component";
+import Header from "../header/header.component";
+import "./layout.component.scss";
 
 export class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className="layout">
         <Header />
         {this.props.children}
       </div>

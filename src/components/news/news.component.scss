@@ -1,0 +1,18 @@
+.news {
+  padding: 20px 0;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &--item {
+      &__link {
+        margin-left: 10px;
+      }
+    }
+  }
+}

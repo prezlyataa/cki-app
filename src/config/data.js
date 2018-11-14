@@ -1,4 +1,27 @@
 export const data = {
+  mainPage: {
+    titles: [
+      {
+        newsTitle: "Останні новини"
+      }
+    ],
+
+    news: [
+      {
+        description: "some new",
+        link: "https://www.youtube.com/"
+      },
+      {
+        description: "some new",
+        link: "https://www.youtube.com/"
+      },
+      {
+        description: "some new",
+        link: ""
+      }
+    ]
+  },
+
   employees: {
     consultants: [
       {

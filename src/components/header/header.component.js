@@ -11,10 +11,10 @@ class Header extends Component {
       "active border-active": pathname === "/employees" ? "active" : ""
     });
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container">
           <Link to="/" className="navbar-brand" replace>
-            ЦКІ
+            <i className="fas fa-layer-group" /> ЦКІ
           </Link>
           <button
             className="navbar-toggler"
