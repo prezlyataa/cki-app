@@ -23,7 +23,7 @@ export class News extends Component {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Посилання
+                          {data.mainPage.news.link}
                         </a>
                       )}
                     </p>

@@ -7,6 +7,7 @@ export const data = {
   mainPage: {
     news: {
       title: "Останні новини",
+      link: "Посилання",
       newsItems: [
         {
           description: "some new",
