@@ -6,12 +6,12 @@ export class News extends Component {
     const { data } = this.props;
     return (
       <div className="news">
-        <h4 className="news__title">{data.mainPage.titles[0].newsTitle}</h4>
+        <h4 className="news__title">{data.mainPage.news.title}</h4>
         <hr />
-        {data.mainPage.news.length > 0 && (
+        {data.mainPage.news.newsItems.length > 0 && (
           <div className="news__list">
             <ul>
-              {data.mainPage.news.map((item, idx) => {
+              {data.mainPage.news.newsItems.map((item, idx) => {
                 return (
                   <li key={idx} className="news__list--item">
                     <p>

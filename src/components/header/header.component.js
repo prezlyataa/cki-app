@@ -5,6 +5,7 @@ import "./header.component.scss";
 
 class Header extends Component {
   render() {
+    const { data } = this.props;
     const { pathname } = this.props.location;
     const activeEmployeesRoute = classnames({
       "nav-item nav-link": true,
@@ -14,7 +15,7 @@ class Header extends Component {
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container">
           <Link to="/" className="navbar-brand" replace>
-            <i className="fas fa-layer-group" /> ЦКІ
+            <i className="fas fa-layer-group" /> {data.routes.main}
           </Link>
           <button
             className="navbar-toggler"
@@ -30,7 +31,7 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <Link to="employees" className={activeEmployeesRoute} replace>
-                Команда<span className="sr-only">(current)</span>
+                  {data.routes.employees}<span className="sr-only">(current)</span>
               </Link>
             </div>
           </div>

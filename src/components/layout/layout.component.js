@@ -4,9 +4,10 @@ import "./layout.component.scss";
 
 export class Layout extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className="layout">
-        <Header />
+        <Header data={data} />
         {this.props.children}
       </div>
     );

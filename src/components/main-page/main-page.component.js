@@ -9,7 +9,7 @@ class MainPage extends Component {
     const { data } = this.props;
     return (
       <div>
-        <Layout>
+        <Layout data={data}>
           <div className="container">
               <News data={data} />
           </div>

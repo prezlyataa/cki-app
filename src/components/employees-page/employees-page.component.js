@@ -7,14 +7,14 @@ class EmployeesPage extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout>
+      <Layout data={data}>
         <div className="container">
           <div className="employees">
-            {data.employees.consultants.length > 0 && (
+            {data.employeesPage.employees.consultants.length > 0 && (
               <div className="consultants">
                 <h3>Наукові консультанти</h3>
                 <hr />
-                {data.employees.consultants.map((employee, idx) => {
+                {data.employeesPage.employees.consultants.map((employee, idx) => {
                   return (
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
@@ -25,11 +25,11 @@ class EmployeesPage extends Component {
                 })}
               </div>
             )}
-            {data.employees.experts.length > 0 && (
+            {data.employeesPage.employees.experts.length > 0 && (
               <div className="experts">
                 <h3>Експерти</h3>
                 <hr />
-                {data.employees.experts.map((employee, idx) => {
+                {data.employeesPage.employees.experts.map((employee, idx) => {
                   return (
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
@@ -40,11 +40,11 @@ class EmployeesPage extends Component {
                 })}
               </div>
             )}
-            {data.employees.assistants.length > 0 && (
+            {data.employeesPage.employees.assistants.length > 0 && (
               <div className="assistants">
                 <h3>Асистенти</h3>
                 <hr />
-                {data.employees.assistants.map((employee, idx) => {
+                {data.employeesPage.employees.assistants.map((employee, idx) => {
                   return (
                     <div key={idx} className="employee">
                       <img src={employee.photo} alt="img" />
