@@ -10,9 +10,17 @@
     justify-content: center;
 
     &--item {
+      &__desc {
+        text-align: justify;
+      }
+
       &__link {
         margin-left: 10px;
       }
     }
+  }
+
+  &__btn {
+    text-align: center;
   }
 }
