@@ -6,7 +6,7 @@ export const data = {
 
   mainPage: {
     news: {
-      title: "Останні новини",
+      title: "Цікаві події",
       link: "Посилання",
       newsItems: [
         {
