@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import MainPage from "../components/main-page/main-page.component";
 import EmployeesPage from "../components/employees-page/employees-page.component";
+import HeadPage from "../components/head-page/head-page.component";
 
 export class RouteSchema extends Component {
   render() {
@@ -12,6 +13,12 @@ export class RouteSchema extends Component {
         key="/"
         path="/"
         render={() => <MainPage data={data} />}
+      />,
+      <Route
+        key="/head"
+        exact
+        path="/head"
+        render={() => <HeadPage data={data} />}
       />,
       <Route
         key="/employees"

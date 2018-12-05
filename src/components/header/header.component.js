@@ -11,6 +11,11 @@ class Header extends Component {
       "nav-item nav-link": true,
       "active border-active": pathname === "/employees" ? "active" : ""
     });
+    const activeHeadRoute = classnames({
+      "nav-item nav-link": true,
+      "active border-active": pathname === "/head" ? "active" : ""
+    });
+
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container">
@@ -30,8 +35,13 @@ class Header extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
+              <Link to="head" className={activeHeadRoute} replace>
+                {data.routes.head}
+                <span className="sr-only">(current)</span>
+              </Link>
               <Link to="employees" className={activeEmployeesRoute} replace>
-                  {data.routes.employees}<span className="sr-only">(current)</span>
+                {data.routes.employees}
+                <span className="sr-only">(current)</span>
               </Link>
             </div>
           </div>

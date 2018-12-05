@@ -51,7 +51,7 @@ export class News extends Component {
         )}
         {this.state.visible < data.mainPage.news.newsItems.length && (
           <div className="news__btn">
-            <button className="btn btn-primary" onClick={this.loadMore}>Більше</button>
+            <button className="btn btn-primary" onClick={this.loadMore}>{data.mainPage.news.btnMore}</button>
           </div>
         )}
       </div>

@@ -11,7 +11,7 @@ class MainPage extends Component {
       <div>
         <Layout data={data}>
           <div className="container">
-              <News data={data} />
+            <News data={data} />
           </div>
         </Layout>
       </div>
